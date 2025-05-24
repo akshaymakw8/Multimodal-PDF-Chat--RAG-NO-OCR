@@ -1,0 +1,498 @@
+# ===========================================================================
+# .gitignore for Multimodal PDF Chat Project
+# ===========================================================================
+
+# ===========================================================================
+# Environment Variables & API Keys (CRITICAL - NEVER COMMIT)
+# ===========================================================================
+.env
+.env.local
+.env.production
+.env.staging
+.env.test
+.env.development
+*.env
+**/secrets.json
+**/config.json
+api_keys.txt
+credentials.json
+
+# ===========================================================================
+# Python
+# ===========================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+multimodal_pdf_chat_env/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ===========================================================================
+# PDF Processing & Data Files
+# ===========================================================================
+
+# Uploaded PDF files (user documents)
+data/uploaded_pdfs/
+data/user_uploads/
+uploads/
+*.pdf
+!data/sample_pdfs/sample_financial.pdf
+!data/sample_pdfs/sample_technical.pdf
+
+# Processed images and extracted content
+data/processed_images/
+data/extracted_content/
+data/temp_files/
+temp_processing/
+extracted_pages/
+
+# Vector store data
+data/vector_store/
+data/embeddings/
+*.faiss
+*.index
+*.pkl
+*.pickle
+faiss_index.bin
+metadata.pkl
+embeddings_*.npy
+
+# Cache directories
+.cache/
+cache/
+__cache__/
+.streamlit_cache/
+
+# ===========================================================================
+# Machine Learning & AI Models
+# ===========================================================================
+
+# Model files
+models/
+*.model
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.pb
+*.onnx
+
+# Hugging Face cache
+.cache/huggingface/
+transformers_cache/
+
+# TensorFlow
+*.tfrecord
+*.tfevents.*
+
+# PyTorch
+*.pth.tar
+
+# ===========================================================================
+# Streamlit Specific
+# ===========================================================================
+
+# Streamlit cache and session data
+.streamlit/
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ===========================================================================
+# IDE & Editor Files
+# ===========================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Atom
+.atom/
+
+# ===========================================================================
+# Operating System Files
+# ===========================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===========================================================================
+# Logs & Debug Files
+# ===========================================================================
+
+# Application logs
+logs/
+*.log
+*.log.*
+debug.log
+error.log
+access.log
+app.log
+streamlit.log
+
+# Debug files
+debug/
+debug_output/
+*.debug
+*.trace
+
+# ===========================================================================
+# Temporary Files
+# ===========================================================================
+
+# Temporary processing files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.old
+
+# Temporary PDF processing
+temp_pdfs/
+processing_temp/
+*.temp.pdf
+
+# ===========================================================================
+# Testing & Coverage
+# ===========================================================================
+
+# Test outputs
+test_outputs/
+test_results/
+pytest_reports/
+
+# Performance profiling
+*.prof
+profile_results/
+
+# ===========================================================================
+# Documentation & Build
+# ===========================================================================
+
+# Generated documentation
+docs/build/
+docs/_build/
+docs/html/
+site/
+
+# Build outputs
+build/
+dist/
+
+# ===========================================================================
+# Database Files
+# ===========================================================================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Other databases
+*.mdb
+*.accdb
+
+# ===========================================================================
+# Configuration & Setup Files
+# ===========================================================================
+
+# Local configuration files
+config/local.py
+config/development.py
+config/production.py
+local_config.json
+user_config.json
+
+# Setup scripts output
+setup_output.txt
+installation.log
+
+# ===========================================================================
+# Security & Sensitive Data
+# ===========================================================================
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+
+# SSH keys
+id_rsa
+id_rsa.pub
+known_hosts
+
+# ===========================================================================
+# Monitoring & Analytics
+# ===========================================================================
+
+# Application metrics
+metrics/
+analytics/
+*.metrics
+
+# Performance monitoring
+performance_logs/
+monitoring/
+
+# ===========================================================================
+# Custom Project Specific
+# ===========================================================================
+
+# User-specific data
+user_data/
+user_sessions/
+user_uploads/
+
+# API response cache
+api_cache/
+response_cache/
+
+# Failed processing attempts
+failed_processing/
+error_dumps/
+
+# Backup files
+backups/
+*.backup
+backup_*/
+
+# ===========================================================================
+# IMPORTANT NOTES FOR DEVELOPERS
+# ===========================================================================
+
+# README for developers:
+# 1. NEVER commit .env files - they contain API keys
+# 2. NEVER commit user-uploaded PDFs - privacy concerns
+# 3. NEVER commit processed vector stores - they can be regenerated
+# 4. NEVER commit API keys or credentials in any form
+# 5. Always test with sample documents, not real user data
+# 6. Use environment variables for all sensitive configuration
+
+# ===========================================================================
+# Sample Files to Keep (NOT ignored)
+# ===========================================================================
+
+# These files should be committed:
+# - README.md
+# - requirements.txt
+# - main.py and all source code
+# - config/settings.py (without actual API keys)
+# - .env.template (template only)
+# - data/sample_pdfs/ (sample documents only)
+# - tests/ (all test files)
+# - docs/ (documentation)
+
+# ===========================================================================
